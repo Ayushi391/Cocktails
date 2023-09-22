@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktails</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Borel&family=Caveat&family=Edu+SA+Beginner:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 id="heading">Happy Cocktails🍸</h1>
+    <p class="quote"><em><%= quote %></em></p>
+    <div class="box">
+        <% if (cocktail){ %>
+        <h2 id="cname"><%= cocktail.strDrink %></h2>
+        <p>Instructions:     <%= cocktail.strInstructions %></p>
+        <p>Glass:      <%= cocktail.strGlass %></p>
+        <p>Ingredients:
+            <%#cocktail.strIngredients %>
+            <ul>
+                <% for (let i = 1; i <= 15; i++) {
+                    const ingredient = cocktail['strIngredient' + i];
+                    const measure = cocktail['strMeasure' + i];
+                    if (ingredient) { %>
+                      <li><%= measure %> <%= ingredient %></li>
+                    <% }
+                  } %>
+              </ul>
+        </p>
+        <p>Category:  <%=cocktail.strCategory %></p>
+        <p>Type:   <%=cocktail.strAlcoholic %></p>
+    </div>
+     
+
+        <img id="image" src="<%=cocktail.strDrinkThumb%>" alt="<%= cocktail.strDrink %>">
+    <% }%>
+    <footer>
+        ©happyCocktails🍹
+        </footer>
+</body>
+</html>

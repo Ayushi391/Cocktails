@@ -1,0 +1,46 @@
+body{
+    background-image: linear-gradient(to top, #bfd5f7, #a5c5f5, #89b6f3, #6ba6f1, #4497ee);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+
+#heading{
+ 
+    font-family: 'Borel', cursive;
+    font-size: 60px;
+}
+
+.quote{
+    font-family: 'Edu SA Beginner', cursive;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.box {
+    font-family: 'Edu SA Beginner', cursive;
+    float: right;
+    max-width: 1000px;
+    padding: 15px;
+    margin: 50px 80px;
+    background: rgb(204, 202, 202);
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    font-size: 25px;
+  }
+
+
+#image{
+    height: 500px;
+    width:500px ;
+    border-radius: 50px;
+    float: left;
+    margin: 50px 80px;
+}
+
+footer{
+    font-family: 'Borel', cursive;
+    position: fixed;
+    bottom: 0;
+  
+}
